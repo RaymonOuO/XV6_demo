@@ -20,7 +20,7 @@ main(int argc, char *argv[])
     } else {
         read(pp2c[0], &buf, 1);
         printf("%d: received ping\n", getpid());
-        write(pc2p[1], "1", 1);
+        write(pc2p[1], &buf, 1);
     }
     exit(0);
     
